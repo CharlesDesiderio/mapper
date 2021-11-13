@@ -1,9 +1,9 @@
 import styles from './Icon.module.css'
 
-const Icon = () => {
+const Icon = (props) => {
   return (
     <div className={styles.icon}>
-      Hello Icon
+      {props.name}
     </div>
   )
 }
