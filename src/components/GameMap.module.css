@@ -1,4 +1,11 @@
 .gameMap {
-  /* width: 4096px;
-  height:  1344px; */
+  width: 4096px;
+  height: 1344px;
+}
+
+.iconContainer {
+  background-color: white;
+  position: absolute;
+  top: 0;
+  left: 0;
 }

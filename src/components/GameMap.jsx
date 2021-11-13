@@ -6,22 +6,40 @@ import Icon from './Icon';
 const GameMap = () => {
   const items = [
     {
-      name: 'coin',
+      name: 'Arrow',
+      image: '/icons/arrow.png'
     },
     {
-      name: 'sword',
+      name: 'Blue Candle',
+      image: '/icons/bluecandle.png'
     },
     {
-      name: 'big shield',
+      name: 'Bomb',
+      image: '/icons/bomb.png'
+    },
+    {
+      name: 'Boomerang',
+      image: '/icons/boomerang.png'
+    },
+    {
+      name: 'Bow',
+      image: '/icons/bow.png'
+    },
+    {
+      name: 'Magic Boomerang',
+      image: '/icons/magicboomerang.png'
     },
   ];
 
   return (
-    <div className={styles.gameMap}>
-      <img src={worldMap} alt="Map" />
+    <div style={{ backgroundImage: `url(${worldMap})` }} className={styles.gameMap}>
+      {/* <img src={worldMap} alt="Map" /> */}
+      <div className={styles.iconContainer}>
       { items.map((item) => {
-        return <Icon name={item.name} />
+        return <Icon item={item} />
       }) }      
+
+      </div>
     </div>
   );
 };

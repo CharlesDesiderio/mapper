@@ -1,6 +1,11 @@
 .icon {
-  background-color: pink;
-  position: absolute;
-  top: 0;
-  left: 0;
+}
+
+.icon img {
+  width: 100%;
+  image-rendering: pixelated;
+  background-color: lightgray;
+  padding: 4px;
+  border-radius: 5px;
+  border: 1px solid black;
 }
