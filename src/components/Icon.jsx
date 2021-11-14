@@ -8,7 +8,6 @@ const Icon = (props) => {
       <div className={styles.icon}>
         <img draggable="false" src={props.item.image} alt="" />
       </div>
-
     </Draggable>
   )
 }

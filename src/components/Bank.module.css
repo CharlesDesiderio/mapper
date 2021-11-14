@@ -1,0 +1,10 @@
+.bank {
+  width: 500px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.bank div {
+  margin: 6px;
+}
