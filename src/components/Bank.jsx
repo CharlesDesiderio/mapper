@@ -2,7 +2,7 @@ import styles from './Bank.module.css'
 
 import Icon from './Icon';
 
-const Bank = () => {
+const Bank = (props) => {
 
   const items = [
     {
@@ -154,7 +154,7 @@ const Bank = () => {
   return (
     <div className={styles.bank}>
       { items.map((item) => {
-        return <Icon item={item} />
+        return <div onClick={() => props.updateItem(item)} ><Icon key={`bank-${item.name}`} item={item} /></div>
       }) }    
     </div>
   )

@@ -1,16 +1,17 @@
 .icon {
-  /* width: 40px;
-  height: 40px; */
+  width: 25px;
+  height: 25px;
+  display: grid;
+  place-items: center;
+  background-color: rgb(0, 153, 255);
+  padding: 2px;
+  border-radius: 5px;
+  border: 2px solid black;
+
 }
 
 .icon img {
-  min-height: 10px;
-  min-width: 15px;
-  max-height: 30px;
-  max-width: 15px;
+  height: 21px;
+  display: block;
   image-rendering: pixelated;
-  background-color: rgb(0, 153, 255);
-  padding: 4px;
-  border-radius: 5px;
-  border: 2px solid black;
 }
