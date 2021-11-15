@@ -1,4 +1,5 @@
 import styles from './Bank.module.css'
+import Frame from './Frame';
 
 import Icon from './Icon';
 
@@ -148,13 +149,21 @@ const Bank = (props) => {
     {
       name: 'Clock',
       image: '/icons/clock.png'
+    },
+    {
+      name: 'Frame',
+      image: ''
     }
   ];
 
   return (
     <div className={styles.bank}>
       { items.map((item) => {
-        return <div onClick={() => props.updateItem(item)} ><Icon key={`bank-${item.name}`} item={item} /></div>
+        if (item.name === 'Frame') {
+          return <div onClick={() => props.updateItem(item)} ><Frame key={`bank-${item.name}`} item={item} /></div>
+        } else {
+          return <div onClick={() => props.updateItem(item)} ><Icon key={`bank-${item.name}`} item={item} /></div>
+        }
       }) }    
     </div>
   )

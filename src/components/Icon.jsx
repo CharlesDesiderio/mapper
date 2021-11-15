@@ -5,7 +5,7 @@ const Icon = (props) => {
 
   return props.drag ? (
     <Draggable grid={[20, 20]}>
-      <div className={styles.icon}>
+      <div className={styles.draggableIcon}>
         <img draggable="false" src={props.item.image} alt="" />
       </div>
     </Draggable>

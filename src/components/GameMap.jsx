@@ -1,11 +1,10 @@
-import Draggable from 'react-draggable'
-
 import styles from './GameMap.module.css';
 
 import worldMap from '../images/map.png';
 import Bank from './Bank';
 import Icon from './Icon'
 import { useState } from 'react';
+import Frame from './Frame';
 
 const GameMap = () => {
 
@@ -22,7 +21,11 @@ const GameMap = () => {
       <Bank updateItem={addItemToList} />
 
       { itemList.map((item) => {
-        return <Icon drag={true} item={item} />
+        if (item.name === 'Frame') {
+          return <Frame drag={true} item={item} />
+        } else {
+          return <Icon drag={true} item={item} />
+        }
       }) }
 
     </div>
