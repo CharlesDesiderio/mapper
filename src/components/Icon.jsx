@@ -4,7 +4,7 @@ import styles from './Icon.module.css'
 const Icon = (props) => {
 
   return props.drag ? (
-    <Draggable grid={[20, 20]}>
+    <Draggable grid={[10, 10]}>
       <div className={styles.draggableIcon}>
         <img draggable="false" src={props.item.image} alt="" />
       </div>

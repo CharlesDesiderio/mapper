@@ -1,17 +1,18 @@
 .icon, .draggableIcon {
-  width: 25px;
-  height: 25px;
+  width: 32px;
+  height: 32px;
   display: grid;
   place-items: center;
-  background-color: rgb(0, 153, 255);
+  background-color: black;
   padding: 2px;
   border-radius: 5px;
-  border: 2px solid black;
+  border: 2px solid gold;
+  z-index: 2;
 }
 
 .draggableIcon {
   position: absolute;
-  top: 150px;
+  top: 210px;
   left: 20px;
 }
 

@@ -1,0 +1,43 @@
+.frame {
+  position: absolute;
+  top: 210px;
+  left: 20px;
+  cursor: default;
+  width: 160px;
+  height: 90px;
+  border-radius: 10px;
+  border: 2px solid gold;
+  background-color: black;
+  display: grid;
+  grid-template-columns: 40px 40px 40px;
+  grid-gap: 10px;
+  justify-content: center;
+  z-index: 1;
+  box-sizing: border-box;
+}
+
+.frame div {
+  height: 32px;
+  width: 32px;
+  background-color: black;
+  margin-top: 34px;
+  border: 2px solid gold;
+  padding: 2px;
+  border-radius: 5px;
+  margin-top: 38px;
+}
+
+.frame input {
+  font-family: 'VT323', monospace;
+  text-transform: uppercase;
+  margin: auto;
+  top: 5px;
+  width: 152px;
+  position: absolute;
+  border: none;
+  background-color: gold;
+  color: black;
+  padding: 2px;
+  font-size: 1.5rem;
+  text-align: center;
+}

@@ -21,7 +21,7 @@ const GameMap = () => {
       <Bank updateItem={addItemToList} />
 
       { itemList.map((item) => {
-        if (item.name === 'Frame') {
+        if (item.name === 'Dungeon Marker') {
           return <Frame drag={true} item={item} />
         } else {
           return <Icon drag={true} item={item} />
