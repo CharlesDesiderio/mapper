@@ -77,3 +77,9 @@
   width: 10px;
   margin: auto;
 }
+
+.bankFrame {
+  border-radius: 5px;
+  border: 2px solid gold;
+  padding: 4px;
+}

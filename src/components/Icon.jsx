@@ -6,6 +6,7 @@ const Icon = (props) => {
   return props.drag ? (
     <Draggable grid={[10, 10]}>
       <div className={styles.draggableIcon}>
+        <span className={styles.removeButton} onClick={() => props.removeItem(props.item)}>❌</span>
         <img draggable="false" src={props.item.image} alt="" />
       </div>
     </Draggable>

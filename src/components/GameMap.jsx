@@ -16,6 +16,13 @@ const GameMap = () => {
     setItemList([...newState])
   }
 
+  const removeItem = (item) => {
+    console.log(itemList.indexOf(item))
+    let newState = itemList
+    newState.splice(itemList.indexOf(item), 1)
+    setItemList([...newState])
+  }
+
   return (
     <div style={{ backgroundImage: `url(${worldMap})` }} className={styles.gameMap}>
       <Bank updateItem={addItemToList} />
@@ -24,7 +31,7 @@ const GameMap = () => {
         if (item.name === 'Dungeon Marker' || item.name === 'Shop Marker') {
           return <Frame drag={true} item={item} />
         } else {
-          return <Icon drag={true} item={item} />
+          return <Icon drag={true} item={item} removeItem={removeItem} />
         }
       }) }
 

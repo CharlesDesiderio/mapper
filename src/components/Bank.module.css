@@ -1,6 +1,6 @@
 .bank {
   position: fixed;
-  width: 480px;
+  width: 490px;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
