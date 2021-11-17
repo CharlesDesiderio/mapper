@@ -1,4 +1,4 @@
-.frame {
+.frame, .rupeeFrame {
   position: absolute;
   top: 210px;
   left: 20px;
@@ -16,7 +16,7 @@
   box-sizing: border-box;
 }
 
-.frame div {
+.frame div, .rupeeFrame div {
   height: 32px;
   width: 32px;
   background-color: black;
@@ -27,7 +27,11 @@
   margin-top: 38px;
 }
 
-.frame input {
+.rupeeFrame {
+  height: 140px;
+}
+
+.titleInput {
   font-family: 'VT323', monospace;
   text-transform: uppercase;
   margin: auto;
@@ -40,4 +44,36 @@
   padding: 2px;
   font-size: 1.5rem;
   text-align: center;
+}
+
+.frameShopInput {
+  width: 33px;
+  position: relative;
+  left: -2px;
+  top: -2px;
+  color: black;
+  background-color: gold;
+  font-family: 'VT323', monospace;
+  font-size: 1.25rem;
+  border: none;
+  margin: none;
+  padding: none;
+  text-align: center;
+}
+
+.rupeeInputContainer {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  top: -14px !important; 
+  margin-top: 0px !important;
+  height: 43px !important;
+  margin: auto !important;
+  border-radius: 0 0 10px 10px !important;
+}
+
+.rupeeInputContainer img {
+  height: 21px;
+  width: 10px;
+  margin: auto;
 }
