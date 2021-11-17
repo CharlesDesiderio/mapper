@@ -30,12 +30,12 @@ const GameMap = () => {
     <div ref={mapRef} style={{ backgroundImage: `url(${worldMap})` }} className={styles.gameMap}>
       <Bank updateItem={addItemToList} />
 
-      { itemList.map((item) => {
+      { itemList.map((item, i) => {
         if (item.name === 'Blank') return ''
         else if (item.name === 'Dungeon Marker' || item.name === 'Shop Marker') {
-          return <Frame position={mapRef} drag={true} item={item} />
+          return <Frame key={`iconItem-${i}`} position={mapRef} drag={true} item={item} />
         } else {
-          return <Icon position={mapRef} drag={true} item={item} removeItem={removeItem} />
+          return <Icon key={`iconItem-${i}`} position={mapRef} drag={true} item={item} removeItem={removeItem} />
         }
       }) }
 

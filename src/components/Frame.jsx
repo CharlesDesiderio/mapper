@@ -15,7 +15,7 @@ if (props.position)  {
   if (props.drag && props.item.name === 'Dungeon Marker') return (
     <Draggable grid={[10, 10]} defaultPosition={{x: posX, y: posY}}>
       <div className={styles.frame}>
-        <input className={styles.titleInput} defaultValue={`New Dungeon`} />
+        <input className={styles.titleInput} placeholder={`New Dungeon`} />
         <div></div>
         <div></div>
         <div></div>
@@ -26,18 +26,18 @@ if (props.position)  {
   if (props.drag && props.item.name === 'Shop Marker') return (
     <Draggable grid={[10, 10]} defaultPosition={{x: posX, y: posY}}>
     <div className={styles.rupeeFrame}>
-      <input className={styles.titleInput} defaultValue={`New Shop`} />
+      <input className={styles.titleInput} placeholder={`New Shop`} />
       <div></div>
       <div></div>
       <div></div>
       <div className={styles.rupeeInputContainer}>
-        <input className={styles.frameShopInput} defaultValue={`0`} /><img src={`/icons/yellowrupee.png`} alt="Rupee" />
+        <input className={styles.frameShopInput} placeholder={`0`} /><img src={`/icons/yellowrupee.png`} alt="Rupee" />
       </div>
       <div className={styles.rupeeInputContainer}>
-        <input className={styles.frameShopInput} defaultValue={`0`} /><img src={`/icons/yellowrupee.png`} alt="Rupee" />
+        <input className={styles.frameShopInput} placeholder={`0`} /><img src={`/icons/yellowrupee.png`} alt="Rupee" />
       </div>
       <div className={styles.rupeeInputContainer}>
-        <input className={styles.frameShopInput} defaultValue={`0`} /><img src={`/icons/yellowrupee.png`} alt="Rupee" />
+        <input className={styles.frameShopInput} placeholder={`0`} /><img src={`/icons/yellowrupee.png`} alt="Rupee" />
       </div>
     </div>
   </Draggable>
