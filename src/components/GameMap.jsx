@@ -3,10 +3,12 @@ import styles from './GameMap.module.css';
 import worldMap from '../images/map.png';
 import Bank from './Bank';
 import Icon from './Icon'
-import { useState } from 'react';
+import { useRef, useState } from 'react';
 import Frame from './Frame';
 
 const GameMap = () => {
+
+  const mapRef = useRef()
 
   const [itemList, setItemList] = useState([])
 
@@ -19,19 +21,21 @@ const GameMap = () => {
   const removeItem = (item) => {
     console.log(itemList.indexOf(item))
     let newState = itemList
-    newState.splice(itemList.indexOf(item), 1)
+    newState[itemList.indexOf(item)].name = 'Blank'
+    newState[itemList.indexOf(item)].image = ''
     setItemList([...newState])
   }
 
   return (
-    <div style={{ backgroundImage: `url(${worldMap})` }} className={styles.gameMap}>
+    <div ref={mapRef} style={{ backgroundImage: `url(${worldMap})` }} className={styles.gameMap}>
       <Bank updateItem={addItemToList} />
 
       { itemList.map((item) => {
-        if (item.name === 'Dungeon Marker' || item.name === 'Shop Marker') {
-          return <Frame drag={true} item={item} />
+        if (item.name === 'Blank') return ''
+        else if (item.name === 'Dungeon Marker' || item.name === 'Shop Marker') {
+          return <Frame position={mapRef} drag={true} item={item} />
         } else {
-          return <Icon drag={true} item={item} removeItem={removeItem} />
+          return <Icon position={mapRef} drag={true} item={item} removeItem={removeItem} />
         }
       }) }
 

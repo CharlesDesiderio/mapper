@@ -2,11 +2,18 @@ import styles from './Frame.module.css'
 
 import Draggable from 'react-draggable'
 
-
-
 const Frame = (props) => {
+
+  let posX = 0;
+  let posY = 0;
+
+if (props.position)  {
+  posX = Math.ceil(Math.abs(props.position.current.getBoundingClientRect().x) / 10) * 10
+  posY = Math.ceil(Math.abs(props.position.current.getBoundingClientRect().y) / 10) * 10
+}
+
   if (props.drag && props.item.name === 'Dungeon Marker') return (
-    <Draggable grid={[10, 10]}>
+    <Draggable grid={[10, 10]} defaultPosition={{x: posX, y: posY}}>
       <div className={styles.frame}>
         <input className={styles.titleInput} defaultValue={`New Dungeon`} />
         <div></div>
@@ -17,9 +24,9 @@ const Frame = (props) => {
   ) 
 
   if (props.drag && props.item.name === 'Shop Marker') return (
-    <Draggable grid={[10, 10]}>
+    <Draggable grid={[10, 10]} defaultPosition={{x: posX, y: posY}}>
     <div className={styles.rupeeFrame}>
-      <input className={styles.titleInput} defaultValue={`Shop Frame`} />
+      <input className={styles.titleInput} defaultValue={`New Shop`} />
       <div></div>
       <div></div>
       <div></div>

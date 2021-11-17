@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import styles from './Bank.module.css'
 import Frame from './Frame';
 
@@ -160,8 +161,23 @@ const Bank = (props) => {
     }
   ];
 
+  let [leftPosition, setLeftPosition] = useState('0px')
+  let [toggleIcon, setToggleIcon] = useState('↩')
+
+  const toggleBank = () => {
+    if (leftPosition === `0px`) {
+      setLeftPosition(`-500px`)
+      setToggleIcon('↪')
+    } else {
+      setLeftPosition(`0px`)
+      setToggleIcon('↩')
+    }
+  }
+
+  
+
   return (
-    <div className={styles.bank}>
+    <div style={{ left: leftPosition }} className={styles.bank}><div onClick={toggleBank} className={styles.slider}>{toggleIcon}</div>
       { items.map((item) => {
         if (item.name === 'Dungeon Marker' || item.name === 'Shop Marker') {
           return <div onClick={() => props.updateItem(item)} ><Frame key={`bank-${item.name}`} item={item} /></div>
