@@ -153,13 +153,17 @@ const Bank = (props) => {
     {
       name: 'Dungeon Marker',
       image: ''
+    },
+    {
+      name: 'Shop Marker',
+      image: ''
     }
   ];
 
   return (
     <div className={styles.bank}>
       { items.map((item) => {
-        if (item.name === 'Dungeon Marker') {
+        if (item.name === 'Dungeon Marker' || item.name === 'Shop Marker') {
           return <div onClick={() => props.updateItem(item)} ><Frame key={`bank-${item.name}`} item={item} /></div>
         } else {
           return <div onClick={() => props.updateItem(item)} ><Icon key={`bank-${item.name}`} item={item} /></div>
