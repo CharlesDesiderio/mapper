@@ -3,3 +3,19 @@
 .app {
   font-family: 'VT323', monospace;
 }
+
+.gitLink {
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  color: white;
+  background-color: black;
+  border: 2px solid gold;
+  padding: 2px;
+  border-radius: 10px;
+}
+
+.gitLink a, .gitLink a:visited {
+  color: white;
+  text-decoration: none;
+}
