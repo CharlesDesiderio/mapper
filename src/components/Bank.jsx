@@ -9,155 +9,231 @@ const Bank = (props) => {
   const items = [
     {
       name: 'Arrow',
-      image: '/icons/arrow.png'
+      image: '/icons/arrow.png',
+      x: 0,
+      y: 0
     },
     {
       name: 'Blue Candle',
-      image: '/icons/bluecandle.png'
+      image: '/icons/bluecandle.png',
+      x: 0,
+      y: 0
     },
     {
       name: 'Bomb',
-      image: '/icons/bomb.png'
+      image: '/icons/bomb.png',
+      x: 0,
+      y: 0
     },
     {
       name: 'Boomerang',
-      image: '/icons/boomerang.png'
+      image: '/icons/boomerang.png',
+      x: 0,
+      y: 0
     },
     {
       name: 'Bow',
-      image: '/icons/bow.png'
+      image: '/icons/bow.png',
+      x: 0,
+      y: 0
     },
     {
       name: 'Magic Boomerang',
-      image: '/icons/magicboomerang.png'
+      image: '/icons/magicboomerang.png',
+      x: 0,
+      y: 0
     },
     {
       name: 'Silver Arrow',
-      image: '/icons/silverarrow.png'
+      image: '/icons/silverarrow.png',
+      x: 0,
+      y: 0
     },
     {
       name: 'Red Candle',
-      image: '/icons/redcandle.png'
+      image: '/icons/redcandle.png',
+      x: 0,
+      y: 0
     },
     {
       name: 'Flute',
-      image: '/icons/flute.png'
+      image: '/icons/flute.png',
+      x: 0,
+      y: 0
     },
     {
       name: 'Food',
-      image: '/icons/food.png'
+      image: '/icons/food.png',
+      x: 0,
+      y: 0
     },
     {
       name: 'Letter',
-      image: '/icons/letter.png'
+      image: '/icons/letter.png',
+      x: 0,
+      y: 0
     },
     {
       name: 'Life Potion',
-      image: '/icons/lifepotion.png'
+      image: '/icons/lifepotion.png',
+      x: 0,
+      y: 0
     },
     {
       name: 'Second Potion',
-      image: '/icons/secondpotion.png'
+      image: '/icons/secondpotion.png',
+      x: 0,
+      y: 0
     },
     {
       name: 'Magical Rod',
-      image: '/icons/magicalrod.png'
+      image: '/icons/magicalrod.png',
+      x: 0,
+      y: 0
     },
     {
       name: 'Book of Magic',
-      image: '/icons/bookofmagic.png'
+      image: '/icons/bookofmagic.png',
+      x: 0,
+      y: 0
     },
     {
       name: 'Sword',
-      image: '/icons/sword.png'
+      image: '/icons/sword.png',
+      x: 0,
+      y: 0
     },
     {
       name: 'White Sword',
-      image: '/icons/whitesword.png'
+      image: '/icons/whitesword.png',
+      x: 0,
+      y: 0
     },
     {
       name: 'Magical Sword',
-      image: '/icons/magicalsword.png'
+      image: '/icons/magicalsword.png',
+      x: 0,
+      y: 0
     },
     {
       name: 'Wooden Shield',
-      image: '/icons/woodenshield.png'
+      image: '/icons/woodenshield.png',
+      x: 0,
+      y: 0
     },
     {
       name: 'Magical Shield',
-      image: '/icons/magicalshield.png'
+      image: '/icons/magicalshield.png',
+      x: 0,
+      y: 0
     },
     {
       name: 'Blue Ring',
-      image: '/icons/bluering.png'
+      image: '/icons/bluering.png',
+      x: 0,
+      y: 0
     },
     {
       name: 'Red Ring',
-      image: '/icons/redring.png'
+      image: '/icons/redring.png',
+      x: 0,
+      y: 0
     },
     {
       name: 'Power Bracelet',
-      image: '/icons/powerbracelet.png'
+      image: '/icons/powerbracelet.png',
+      x: 0,
+      y: 0
     },
     {
       name: 'Map',
-      image: '/icons/map.png'
+      image: '/icons/map.png',
+      x: 0,
+      y: 0
     },
     {
       name: 'Compass',
-      image: '/icons/compass.png'
+      image: '/icons/compass.png',
+      x: 0,
+      y: 0
     },
     {
       name: 'Key',
-      image: '/icons/key.png'
+      image: '/icons/key.png',
+      x: 0,
+      y: 0
     },
     {
       name: 'Magical Key',
-      image: '/icons/magicalkey.png'
+      image: '/icons/magicalkey.png',
+      x: 0,
+      y: 0
     },
     {
       name: 'Raft',
-      image: '/icons/raft.png'
+      image: '/icons/raft.png',
+      x: 0,
+      y: 0
     },
     {
       name: 'Step Ladder',
-      image: '/icons/stepladder.png'
+      image: '/icons/stepladder.png',
+      x: 0,
+      y: 0
     },
     {
       name: 'Triforce Shard',
-      image: '/icons/triforceshard.png'
+      image: '/icons/triforceshard.png',
+      x: 0,
+      y: 0
     },
     {
       name: 'Heart Container',
-      image: '/icons/heartcontainer.png'
+      image: '/icons/heartcontainer.png',
+      x: 0,
+      y: 0
     },
     {
       name: 'Heart',
-      image: '/icons/heart.png'
+      image: '/icons/heart.png',
+      x: 0,
+      y: 0
     },
     {
       name: 'Fairy',
-      image: '/icons/fairy.png'
+      image: '/icons/fairy.png',
+      x: 0,
+      y: 0
     },
     {
       name: 'Yellow Rupee',
-      image: '/icons/yellowrupee.png'
+      image: '/icons/yellowrupee.png',
+      x: 0,
+      y: 0
     },
     {
       name: 'Blue Rupee',
-      image: '/icons/bluerupee.png'
+      image: '/icons/bluerupee.png',
+      x: 0,
+      y: 0
     },
     {
       name: 'Clock',
-      image: '/icons/clock.png'
+      image: '/icons/clock.png',
+      x: 0,
+      y: 0
     },
     {
       name: 'Dungeon Marker',
-      image: ''
+      image: '',
+      x: 0,
+      y: 0
     },
     {
       name: 'Shop Marker',
-      image: ''
+      image: '',
+      x: 0,
+      y: 0
     }
   ];
 
@@ -173,8 +249,6 @@ const Bank = (props) => {
       setToggleIcon('↩')
     }
   }
-
-  
 
   return (
     <div style={{ left: leftPosition }} className={styles.bank}><div onClick={toggleBank} className={styles.slider}>{toggleIcon}</div>

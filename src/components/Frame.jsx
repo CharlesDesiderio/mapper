@@ -4,17 +4,14 @@ import Draggable from 'react-draggable'
 
 const Frame = (props) => {
 
-  let posX = 0;
-  let posY = 0;
-
-if (props.position)  {
-  posX = Math.ceil(Math.abs(props.position.current.getBoundingClientRect().x) / 10) * 10
-  posY = Math.ceil(Math.abs(props.position.current.getBoundingClientRect().y) / 10) * 10
-}
-
   if (props.drag && props.item.name === 'Dungeon Marker') return (
-    <Draggable grid={[10, 10]} defaultPosition={{x: posX, y: posY}}>
+    <Draggable
+      grid={[10, 10]}
+      position={{ x: props.item.x, y:props.item.y }} 
+      onDrag={(e, data) => props.handleStop(props.i, data.x, data.y)}
+    >
       <div className={styles.frame}>
+        <span className={styles.removeButton} onClick={() => props.removeItem(props.item)}>❌</span>
         <input className={styles.titleInput} placeholder={`New Dungeon`} />
         <div></div>
         <div></div>
@@ -24,8 +21,13 @@ if (props.position)  {
   ) 
 
   if (props.drag && props.item.name === 'Shop Marker') return (
-    <Draggable grid={[10, 10]} defaultPosition={{x: posX, y: posY}}>
+    <Draggable
+      grid={[10, 10]}
+      position={{ x: props.item.x, y:props.item.y }} 
+      onDrag={(e, data) => props.handleStop(props.i, data.x, data.y)}
+    >
     <div className={styles.rupeeFrame}>
+      <span className={styles.removeButton} onClick={() => props.removeItem(props.item)}>❌</span>
       <input className={styles.titleInput} placeholder={`New Shop`} />
       <div></div>
       <div></div>
