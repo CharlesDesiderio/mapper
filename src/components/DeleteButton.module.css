@@ -10,5 +10,5 @@
   color: white;
   display: grid;
   place-items: center;
-  /* text-align: center; */
+  cursor: pointer;
 }

@@ -16,6 +16,7 @@
 
 .bank div {
   margin: 2px;
+  cursor: pointer;
 }
 
 .slider {
