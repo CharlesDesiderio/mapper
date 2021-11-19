@@ -22,8 +22,14 @@ const GameMap = () => {
   const [itemList, setItemList] = useState(initialState)
 
   const addItemToList = (item) => {
+
+    let posX = Math.ceil(Math.abs(mapRef.current.getBoundingClientRect().x) / 10) * 10
+    let posY = Math.ceil(Math.abs(mapRef.current.getBoundingClientRect().y) / 10) * 10
+
     let newState = itemList
     itemList.push(item)
+    item.x = posX
+    item.y = posY
     setItemList([...newState])
     window.localStorage.setItem("zeldaMapperState", JSON.stringify(itemList))
 
@@ -60,9 +66,9 @@ const GameMap = () => {
       { itemList.map((item, i) => {
         if (item.name === 'Blank') return ''
         else if (item.name === 'Dungeon Marker' || item.name === 'Shop Marker') {
-          return <Frame key={`iconItem-${i}`} position={mapRef} drag={true} item={item} i={i} removeItem={removeItem} handleStop={handleStop} />
+          return <Frame key={`iconItem-${i}`} drag={true} item={item} i={i} removeItem={removeItem} handleStop={handleStop} />
         } else {
-          return <Icon key={`iconItem-${i}`} position={mapRef} drag={true} item={item} i={i} removeItem={removeItem} handleStop={handleStop} />
+          return <Icon key={`iconItem-${i}`} drag={true} item={item} i={i} removeItem={removeItem} handleStop={handleStop} />
         }
       }) }
 
