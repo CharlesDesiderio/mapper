@@ -1,8 +1,8 @@
 import styles from './DeleteButton.module.css'
 
-const DeleteButton = (props) => {
+const DeleteButton = ({ clearStorage }) => {
   return (
-    <div onClick={props.clearStorage} className={styles.delete}>🗑</div>
+    <div onClick={clearStorage} className={styles.delete}>🗑</div>
   )
 }
 

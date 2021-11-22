@@ -4,7 +4,7 @@ import Frame from './Frame';
 
 import Icon from './Icon';
 
-const Bank = (props) => {
+const Bank = ({ updateItem }) => {
 
   const items = [
     {
@@ -254,9 +254,9 @@ const Bank = (props) => {
     <div style={{ left: leftPosition }} className={styles.bank}><div onClick={toggleBank} className={styles.slider}>{toggleIcon}</div>
       { items.map((item) => {
         if (item.name === 'Dungeon Marker' || item.name === 'Shop Marker') {
-          return <div key={`bank-${item.name}`} onClick={() => props.updateItem(item)} ><Frame item={item} /></div>
+          return <div key={`bank-${item.name}`} onClick={() => updateItem(item)} ><Frame item={item} /></div>
         } else {
-          return <div key={`bank-${item.name}`} onClick={() => props.updateItem(item)} ><Icon item={item} /></div>
+          return <div key={`bank-${item.name}`} onClick={() => updateItem(item)} ><Icon item={item} /></div>
         }
       }) }    
     </div>
