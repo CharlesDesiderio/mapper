@@ -32,14 +32,11 @@ const GameMap = () => {
     item.y = posY
     setItemList([...newState])
     window.localStorage.setItem("zeldaMapperState", JSON.stringify(itemList))
-
   }
 
   const removeItem = (item) => {
-    console.log(itemList.indexOf(item))
     let newState = itemList
-    newState[itemList.indexOf(item)].name = 'Blank'
-    newState[itemList.indexOf(item)].image = ''
+    newState.splice(itemList.indexOf(item), 1)
     setItemList([...newState])
     window.localStorage.setItem("zeldaMapperState", JSON.stringify(itemList))
   }
@@ -55,7 +52,6 @@ const GameMap = () => {
   const clearStorage = () => {
     localStorage.removeItem("zeldaMapperState")
     setItemList([])
-
   }
 
   return (
@@ -64,8 +60,7 @@ const GameMap = () => {
       <Bank updateItem={addItemToList} />
 
       { itemList.map((item, i) => {
-        if (item.name === 'Blank') return ''
-        else if (item.name === 'Dungeon Marker' || item.name === 'Shop Marker') {
+        if (item.name === 'Dungeon Marker' || item.name === 'Shop Marker') {
           return <Frame key={`iconItem-${i}`} drag={true} item={item} i={i} removeItem={removeItem} handleStop={handleStop} />
         } else {
           return <Icon key={`iconItem-${i}`} drag={true} item={item} i={i} removeItem={removeItem} handleStop={handleStop} />
