@@ -1,7 +1,7 @@
 import styles from './App.module.css'
 import GameMap from './components/GameMap'
 
-const App = () => {
+const App = (): JSX.Element => {
   return (
     <div className={styles.app}>
       <GameMap />
