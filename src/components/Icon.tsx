@@ -1,7 +1,20 @@
 import Draggable from 'react-draggable';
 import styles from './Icon.module.css';
 
-const Icon = ({ drag, item, handleStop, removeItem, i }) => {
+interface iconProps {
+  drag: boolean
+  item: {
+    name: string
+    image: string
+    x: number
+    y: number
+  }
+  handleStop: (i: number, x: number, y: number) => void
+  removeItem: (item: { name: string, image: string, x: number, y: number }) => void
+  i: number
+}
+
+const Icon = ({ drag, item, handleStop, removeItem, i }: iconProps): JSX.Element => {
   return drag ? (
     <Draggable
       grid={[10, 10]}

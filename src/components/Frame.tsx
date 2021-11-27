@@ -2,7 +2,20 @@ import styles from './Frame.module.css'
 
 import Draggable from 'react-draggable'
 
-const Frame = ({ drag, item, handleStop, removeItem, i }) => {
+interface frameProps {
+  drag: boolean
+  item: {
+    name: string
+    image: string
+    x: number
+    y: number
+  }
+  handleStop: (i: number, x: number, y: number) => void
+  removeItem: (item: { name: string, image: string, x: number, y: number }) => void
+  i: number
+}
+
+const Frame = ({ drag, item, handleStop, removeItem, i }: frameProps) => {
 
   if (drag && item.name === 'Dungeon Marker') return (
     <Draggable

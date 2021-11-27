@@ -9,19 +9,19 @@ import DeleteButton from './DeleteButton';
 
 const GameMap = () => {
 
-  const mapRef = useRef()
+  const mapRef = useRef<any>()
 
   let initialState
 
   if (window.localStorage.getItem("zeldaMapperState")) {
-    initialState = JSON.parse(window.localStorage.getItem("zeldaMapperState"))
+    initialState = JSON.parse(window.localStorage.getItem("zeldaMapperState") || '{}')
   } else {
     initialState = []
   }
 
   const [itemList, setItemList] = useState(initialState)
 
-  const addItemToList = (item) => {
+  const addItemToList = (item: { name: string, image: string, x: number, y: number }) => {
 
     let posX = Math.ceil(Math.abs(mapRef.current.getBoundingClientRect().x) / 10) * 10
     let posY = Math.ceil(Math.abs(mapRef.current.getBoundingClientRect().y) / 10) * 10
@@ -34,14 +34,14 @@ const GameMap = () => {
     window.localStorage.setItem("zeldaMapperState", JSON.stringify(itemList))
   }
 
-  const removeItem = (item) => {
+  const removeItem = (item: { name: string, image: string, x: number, y: number }) => {
     let newState = itemList
     newState.splice(itemList.indexOf(item), 1)
     setItemList([...newState])
     window.localStorage.setItem("zeldaMapperState", JSON.stringify(itemList))
   }
 
-  const handleStop = (i, x, y) => {
+  const handleStop = (i: number, x: number, y: number) => {
     let newState = itemList
     newState[i].x = x
     newState[i].y = y
@@ -59,7 +59,7 @@ const GameMap = () => {
       { window.localStorage.getItem("zeldaMapperState") ? <DeleteButton clearStorage={clearStorage} /> : '' }
       <Bank updateItem={addItemToList} />
 
-      { itemList.map((item, i) => {
+      { itemList.map((item: { name: string, image: string, x: number, y: number }, i: number) => {
         if (item.name === 'Dungeon Marker' || item.name === 'Shop Marker') {
           return <Frame key={`iconItem-${i}`} drag={true} item={item} i={i} removeItem={removeItem} handleStop={handleStop} />
         } else {
